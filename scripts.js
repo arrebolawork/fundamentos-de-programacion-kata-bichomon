@@ -25,8 +25,16 @@ images.forEach((image) => {
 // *Premium:*
 
 // 7. Cambia el fondo de todos los `infocard-lg-data text-muted` para todos los Pokimon voladores `itype flying`
-const flying = document.querySelectorAll(".itype.flying");
-flying.forEach((fly) => {
-  const contenedorPadre = fly.closest(".infocard-lg-data.text-muted");
-  contenedorPadre.style.background = "lightgreen";
+// const flying = document.querySelectorAll(".itype.flying");
+// flying.forEach((fly) => {
+//   const contenedorPadre = fly.closest(".infocard-lg-data.text-muted");
+//   contenedorPadre.style.background = "lightgreen";
+// });
+const pokemons = document.querySelectorAll(".infocard-lg-data.text-muted");
+pokemons.forEach((pokemon) => {
+  // Comprueba si el Pokémon tiene el tipo "flying"
+  if (pokemon.querySelector(".itype.flying") !== null) {
+    // Cambia el fondo de ese Pokémon
+    pokemon.style.background = "lightblue";
+  }
 });
